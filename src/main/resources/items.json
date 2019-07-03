@@ -1,0 +1,31 @@
+[
+	{
+		"name":"Potion",
+		"description":"Restaure 20 PV d’un Pokemon",
+		"price":"300"
+	},
+	{
+		"name":"Super Potion",
+		"description":"Restaure 50 PV d’un Pokemon",
+		"price":"700"
+	},
+	{
+		"name":"Rappel",
+		"description":"Permet de réanimer un Pokemon KO",
+		"price":"1500"
+	},
+	{
+		"name":"Antidote",
+		"description":"Permet de soigner un Pokemon empoisonné",
+		"price":"100"
+	},
+	{
+		"name":"Pokeball",
+		"description":"Permet d’attraper un Pokemon",
+		"price":"200"
+	},
+	{ 	"name": "SuperBall",
+		"description":"Permet d’attraper un Pokemon avec une meilleure chance de réussite",
+		"price":"600"
+	}
+]
