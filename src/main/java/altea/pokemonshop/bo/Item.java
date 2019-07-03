@@ -1,6 +1,7 @@
 package altea.pokemonshop.bo;
 
 public class Item {
+    private String picture;
     private String name;
     private String description;
     private int price;
@@ -19,6 +20,14 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public String getDescription() {
