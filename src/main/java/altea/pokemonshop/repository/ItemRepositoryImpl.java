@@ -34,10 +34,5 @@ public class ItemRepositoryImpl implements ItemRepository {
     public Item findById(int id) {
         return this.items.stream().filter(i -> i.getId() == id).findFirst().orElse(null);
     }
-
-   /* @Override
-    public void save(Item item) {
-       var itemsUpd = this.trainer.getTrainerItems().add(item);
-       this.trainer.setTrainerItems(itemsUpd);
-    }*/
+    
 }
