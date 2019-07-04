@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+    {{> layout/header}}
+
+    <body>
+        {{> layout/toolbar}}
+
+        <div class="container">
+
+            <center>
+                <div class="row col-md-25">
+                    <div class="card-deck">
+                        {{#trainerItems}}
+                        <div class="col-md-4">
+                            <div class="card shadow-sm mb-3">
+                                <img  src={{picture}} width="60" height="60"/>
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">{{name}}</h4>
+
+                                </div>
+                                <h5 class="my-0 font-weight-normal">{{description}}</h5>
+
+
+                            </div>
+
+                        </div>
+                        {{/trainerItems}}
+                    </div>
+                </div>
+
+
+            </center>
+        </div>
+
+    </body>
+</html>
