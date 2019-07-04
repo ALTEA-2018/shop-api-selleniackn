@@ -5,20 +5,17 @@
 
 <body>
 {{> layout/toolbar}}
+
 <div class="container">
 
-    <h1 class="pt-md-5 pb-md-5">Welcome To The PokeShop</h1>
-
-    <div class="row">
-        <img  src="/images/berne.jpg" class="col-md-4"/>
-
-        <div class="row col-md-30">
+        <center>
+        <div class="row col-md-25">
             <div class="card-deck">
                 {{#items}}
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="card shadow-sm mb-3">
+                        <img  src={{picture}} width="60" height="60"/>
                         <div class="card-header">
-                            <img  src={{picture}} class="col-md-7"/>
                             <h4 class="my-0 font-weight-normal">{{name}}</h4>
 
                         </div>
@@ -28,14 +25,17 @@
                             <span class="badge badge-primary">Price : {{price}} ¤</span>
 
                         </div>
+                        <button type="button" class="btn btn-success">Buy</button>
+
                     </div>
+
                 </div>
                 {{/items}}
             </div>
         </div>
 
-    </div>
 
+        </center>
 </div>
 
 </body>
