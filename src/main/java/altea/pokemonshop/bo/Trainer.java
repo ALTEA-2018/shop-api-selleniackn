@@ -7,7 +7,7 @@ public class Trainer {
     private String name;
     private String password;
     private int credits;
-    private List<Item> trainerItems;
+    private List<ItemTrainer> trainerItems;
 
     public Trainer() {
 
@@ -49,11 +49,11 @@ public class Trainer {
         this.credits = credits;
     }
 
-    public List<Item> getTrainerItems() {
+    public List<ItemTrainer> getTrainerItems() {
         return trainerItems;
     }
 
-    public void setTrainerItems(List<Item> trainerItems) {
+    public void setTrainerItems(List<ItemTrainer> trainerItems) {
         this.trainerItems = trainerItems;
     }
 }
