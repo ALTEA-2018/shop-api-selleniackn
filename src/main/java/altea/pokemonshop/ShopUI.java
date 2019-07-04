@@ -1,6 +1,7 @@
 package altea.pokemonshop;
 
 import altea.pokemonshop.bo.Item;
+import altea.pokemonshop.bo.ItemTrainer;
 import altea.pokemonshop.bo.Trainer;
 import altea.pokemonshop.repository.TrainerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
@@ -28,6 +30,14 @@ public class ShopUI {
             var berne = new Trainer("Berne");
             berne.setPassword(bCryptPasswordEncoder.encode("1234"));
             berne.setCredits(300);
+            var item1 = new ItemTrainer(1);
+            var item5 = new ItemTrainer(1);
+            var item6 = new ItemTrainer(1);
+            var item2 = new ItemTrainer(4);
+            var item3 = new ItemTrainer(2);
+            var item4 = new ItemTrainer(3);
+            var listItem = Arrays.asList(item1, item2, item3, item4, item5, item6);
+            berne.setTrainerItems(listItem);
 
             var fellenia = new Trainer("Fellenia");
             fellenia.setPassword(bCryptPasswordEncoder.encode("1234"));
