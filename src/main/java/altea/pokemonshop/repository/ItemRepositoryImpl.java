@@ -34,5 +34,4 @@ public class ItemRepositoryImpl implements ItemRepository {
     public Item findById(int id) {
         return this.items.stream().filter(i -> i.getId() == id).findFirst().orElse(null);
     }
-    
 }

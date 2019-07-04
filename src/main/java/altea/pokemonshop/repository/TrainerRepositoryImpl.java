@@ -30,6 +30,12 @@ public class TrainerRepositoryImpl implements TrainerRepository {
     }
 
     @Override
+    public void addCredits(int qte, String trainerName) {
+    var trainer = this.trainers.stream().filter(p -> p.getName().equals(trainerName)).findFirst().orElse(null);
+    trainer.setCredits(trainer.getCredits()+ (qte * 1000));
+    }
+
+    @Override
     public void save(Trainer trainer) {
         this.trainers.add(trainer);
     }

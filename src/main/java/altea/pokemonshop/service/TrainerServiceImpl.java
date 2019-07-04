@@ -38,6 +38,13 @@ public class TrainerServiceImpl implements TrainerService {
         return trainer;
     }
 
+    @Override
+    public void addCredits(int qte, String trainerName) {
+        this.trainerRepository.addCredits(qte,trainerName);
+
+    }
+
+
     public TrainerRepository getTrainerRepository() {
         return trainerRepository;
     }

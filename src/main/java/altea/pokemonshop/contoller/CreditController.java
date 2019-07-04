@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -32,15 +33,20 @@ public class CreditController {
         stringObjectMap.put("trainer", trainer);
         return new ModelAndView("credits", stringObjectMap);
     }
-    /*@PostMapping(value = "/buyPokedollars")
+
+    @PostMapping(value = "/buyPokedollars")
     public ModelAndView buyPoke(int qte){
-        ModelAndView modelAndView = new ModelAndView("buycredit");
-        modelAndView.addObject("qte", );
-        return modelAndView;
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails principal = (UserDetails) authentication.getPrincipal();
+        this.trainerService.addCredits(qte,principal.getUsername());
 
-}*/
+        Map<String, Object> stringObjectMap = new HashMap<>();
+        Trainer trainer = this.trainerService.findTrainerByName(principal.getUsername());
+        stringObjectMap.put("trainer", trainer);
+        return new ModelAndView("credits", stringObjectMap);
+    }
 
-        @Autowired
+    @Autowired
     public void setTrainerService(TrainerService trainerService) {
         this.trainerService = trainerService;
     }
