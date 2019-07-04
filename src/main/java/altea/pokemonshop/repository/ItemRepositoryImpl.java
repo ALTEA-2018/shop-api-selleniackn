@@ -12,6 +12,8 @@ import java.util.List;
 @Repository
 public class ItemRepositoryImpl implements ItemRepository {
     private List<Item> items;
+    private Trainer trainer;
+
     public ItemRepositoryImpl(){
         try {
             var itemsStream = new ClassPathResource("items.json").getInputStream();
@@ -27,9 +29,13 @@ public class ItemRepositoryImpl implements ItemRepository {
 
         return this.items;
     }
-
     @Override
     public List<Item> findItemsByTrainers(Trainer trainer) {
-        return null;
+        return trainer.getTrainerItems();
     }
+   /* @Override
+    public void save(Item item) {
+       var itemsUpd = this.trainer.getTrainerItems().add(item);
+       this.trainer.setTrainerItems(itemsUpd);
+    }*/
 }
