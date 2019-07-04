@@ -1,6 +1,7 @@
 package altea.pokemonshop.bo;
 
 public class Item {
+    private int id;
     private String picture;
     private String name;
     private String description;
@@ -12,6 +13,14 @@ public class Item {
 
     public Item(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
