@@ -17,11 +17,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
 
-    @Override
-    public List<Item> findItemsByTrainers(Trainer trainer) {
-        return this.itemRepository.findItemsByTrainers(trainer);
-    }
-
     public ItemRepository getItemRepository() {
         return itemRepository;
     }
