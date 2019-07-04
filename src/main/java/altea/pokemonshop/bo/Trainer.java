@@ -1,10 +1,13 @@
 package altea.pokemonshop.bo;
 
+import java.util.List;
+
 public class Trainer {
     private int id;
     private String name;
     private String password;
     private int credits;
+    private List<Item> trainerItems;
 
     public Trainer() {
 
@@ -44,5 +47,13 @@ public class Trainer {
 
     public void setCredits(int credits) {
         this.credits = credits;
+    }
+
+    public List<Item> getTrainerItems() {
+        return trainerItems;
+    }
+
+    public void setTrainerItems(List<Item> trainerItems) {
+        this.trainerItems = trainerItems;
     }
 }
