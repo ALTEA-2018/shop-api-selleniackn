@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Buy Poke Dollars</title>
-</head>
+{{> layout/header}}
 <body>
-    <form>
+{{> layout/toolbar}}
+<div class="container pt-4">
+    <form  action="/buyPokedollars" method="post">
         <div class="form-group">
             <label for="credit">Credits</label>
-            <input type="credit" class="form-control" id="credit" aria-describedby="creditHelp" placeholder="Enter quantity">
-            <small id="creditHelp" class="form-text text-muted">how many pokedollars do you want to buy.</small>
+            <input type="credit" class="form-control" id="credit" aria-describedby="creditHelp" placeholder="Enter amount">
+            <small id="creditHelp" class="form-text text-muted">enter an amount (1€ = 1000¤).</small>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+</div>
 </body>
 </html>

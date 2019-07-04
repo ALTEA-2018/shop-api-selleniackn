@@ -1,37 +1,36 @@
 <!doctype html>
 <html lang="en">
 
-    {{> layout/header}}
+{{> layout/header}}
 
-    <body>
-        {{> layout/toolbar}}
+<body>
+{{> layout/toolbar}}
 
-        <div class="container">
+<div class="container pt-4">
 
-            <center>
-                <div class="row col-md-25">
-                    <div class="card-deck">
-                        {{#trainerItems}}
-                        <div class="col-md-4">
-                            <div class="card shadow-sm mb-3">
-                                <img  src={{picture}} width="60" height="60"/>
-                                <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">{{name}}</h4>
+    <div class="row col-md-25">
+        <div class="card-deck">
+            {{#items.entrySet}}
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-3">
+                    <img  src={{key.picture}} width="60" height="60"/>
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">{{key.name}}</h4>
 
-                                </div>
-                                <h5 class="my-0 font-weight-normal">{{description}}</h5>
+                    </div>
+                    <h5 class="my-0 font-weight-normal">{{key.description}}</h5>
 
+                    <div class="card-body">
+                        <h4><span class="badge badge-primary">Qte : {{value}}</span></h4>
 
-                            </div>
-
-                        </div>
-                        {{/trainerItems}}
                     </div>
                 </div>
 
-
-            </center>
+            </div>
+            {{/items.entrySet}}
         </div>
+    </div>
+</div>
 
-    </body>
+</body>
 </html>
