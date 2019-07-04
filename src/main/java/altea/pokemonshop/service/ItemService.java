@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface ItemService {
     List<Item> findAllItems();
-    List<Item> findItemsByTrainers(Trainer trainer);
 
 }

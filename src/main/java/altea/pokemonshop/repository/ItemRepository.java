@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ItemRepository {
     List<Item> finAllItems();
-    List<Item> findItemsByTrainers(Trainer trainer);
+    Item findById(int id);
 
 }
 
