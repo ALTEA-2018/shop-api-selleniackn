@@ -1,6 +1,5 @@
 package altea.pokemonshop;
 
-import altea.pokemonshop.bo.Item;
 import altea.pokemonshop.bo.ItemTrainer;
 import altea.pokemonshop.bo.Trainer;
 import altea.pokemonshop.repository.TrainerRepository;
@@ -10,15 +9,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 import java.util.Arrays;
-import java.util.List;
+
 
 @SpringBootApplication
 public class ShopUI {
 
     public static void main(String... args) {
-       SpringApplication.run(ShopUI.class, args);
+        SpringApplication.run(ShopUI.class, args);
     }
 
     @Bean
