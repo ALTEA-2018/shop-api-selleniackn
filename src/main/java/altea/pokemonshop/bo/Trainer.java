@@ -1,5 +1,6 @@
 package altea.pokemonshop.bo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Trainer {
@@ -10,11 +11,13 @@ public class Trainer {
     private List<ItemTrainer> trainerItems;
 
     public Trainer() {
+        this.trainerItems = new ArrayList<>();
 
     }
 
     public Trainer(String name) {
         this.name = name;
+        this.trainerItems = new ArrayList<>();
     }
 
     public int getId() {
