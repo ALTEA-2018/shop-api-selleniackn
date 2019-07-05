@@ -13,19 +13,16 @@
             {{#items.entrySet}}
             <div class="col-md-4">
                 <div class="card shadow-sm mb-3">
-                    <img  src={{key.picture}} width="60" height="60"/>
+                    <img class="p-2" style="margin: auto" src={{key.picture}} width="150" height="150"/>
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">{{key.name}}</h4>
-
+                        <h4 class="p-2 font-weight-normal">{{key.name}}</h4>
                     </div>
-                    <h5 class="my-0 font-weight-normal">{{key.description}}</h5>
+                    <span class="p-2 font-weight-normal" style="font-size: 14px">{{key.description}}</span>
 
                     <div class="card-body">
-                        <h4><span class="badge badge-primary">Qte : {{value}}</span></h4>
-
+                        <h4><span class="badge badge-success">Qte : {{value}}</span></h4>
                     </div>
                 </div>
-
             </div>
             {{/items.entrySet}}
         </div>

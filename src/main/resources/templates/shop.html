@@ -8,30 +8,31 @@
 
 <div class="container pt-4">
 
-        <div class="row col-md-25">
-            <div class="card-deck">
-                {{#items}}
-                <div class="col-md-4">
-                    <div class="card shadow-sm mb-3">
-                        <img  src={{picture}} width="60" height="60"/>
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">{{name}}</h4>
+    <div style="font-size: 18px" class="pb-3">{{message}}</div>
 
-                        </div>
-                        <h5 class="my-0 font-weight-normal">{{description}}</h5>
-
-                        <div class="card-body">
-                            <h4><span class="badge badge-primary">Price : {{price}} ¤</span></h4>
-                        </div>
-                        <form action="/addItem/{idItem}" method="post">
-                        <button type="button" class="btn btn-success">Buy</button>
-                        </form>
+    <div class="row col-md-25">
+        <div class="card-deck">
+            {{#items}}
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-3">
+                    <img class="p-2" style="margin: auto" src={{picture}} width="150" height="150"/>
+                    <div class="card-header">
+                        <h4 class="p-2 font-weight-normal">{{name}}</h4>
                     </div>
+                    <span class="p-2 font-weight-normal" style="font-size: 14px">{{description}}</span>
 
+                    <div class="card-body">
+                        <h4><span class="badge badge-primary">Price : {{price}} ¤</span></h4>
+                    </div>
+                    <form action="/addItem" method="post" class="col-md-12 pb-2">
+                        <input style="display: none" name="id" value="{{id}}">
+                        <button type="submit" style="width: 100%" class="btn btn-success">Buy</button>
+                    </form>
                 </div>
-                {{/items}}
             </div>
+            {{/items}}
         </div>
+    </div>
 
 </div>
 
