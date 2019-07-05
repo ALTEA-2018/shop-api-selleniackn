@@ -27,9 +27,6 @@ public class ShopUI {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
         return (args) -> {
-            var berne = new Trainer("Berne");
-            berne.setPassword(bCryptPasswordEncoder.encode("1234"));
-            berne.setCredits(300);
             var item1 = new ItemTrainer(1);
             var item5 = new ItemTrainer(1);
             var item6 = new ItemTrainer(1);
@@ -37,19 +34,13 @@ public class ShopUI {
             var item3 = new ItemTrainer(2);
             var item4 = new ItemTrainer(3);
             var listItem = Arrays.asList(item1, item2, item3, item4, item5, item6);
-            berne.setTrainerItems(listItem);
 
-            var fellenia = new Trainer("Fellenia");
-            fellenia.setPassword(bCryptPasswordEncoder.encode("1234"));
-            fellenia.setCredits(7500);
 
             // SASHA
             var sasha = new Trainer("Sasha");
             sasha.setPassword(bCryptPasswordEncoder.encode("pokepoke"));
             sasha.setCredits(300);
-
-            repository.save(berne);
-            repository.save(fellenia);
+            sasha.setTrainerItems(listItem);
             repository.save(sasha);
         };
     }
