@@ -44,6 +44,11 @@ public class TrainerServiceImpl implements TrainerService {
 
     }
 
+    @Override
+    public boolean addItem(int idItem, String trainerName) {
+        return this.trainerRepository.addItem(idItem,trainerName);
+    }
+
 
     public TrainerRepository getTrainerRepository() {
         return trainerRepository;

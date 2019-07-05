@@ -9,5 +9,6 @@ public interface TrainerService {
     Trainer findTrainerById(int id);
     Trainer findTrainerByName(String name);
     void addCredits(int qte, String trainerName);
+    boolean addItem(int idItem, String trainerName);
 
 }

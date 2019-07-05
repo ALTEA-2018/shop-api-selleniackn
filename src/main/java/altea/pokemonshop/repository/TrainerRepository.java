@@ -10,4 +10,6 @@ public interface TrainerRepository {
     Trainer findTrainerByName(String name);
     void addCredits(int qte, String trainerName);
     void save(Trainer trainer);
+
+    boolean addItem(int idItem, String trainerName);
 }
